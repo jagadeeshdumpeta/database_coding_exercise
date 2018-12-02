@@ -21,8 +21,8 @@ CREATE INDEX ON Users5 USING LocationPoint(geog);
 --IsMatched=1: matched, 0: match rejected
 CREATE table UsersMatchSet
 (
-	UserID integer not null REFERENCES Users2(UserPK),	
-	MatchedUserID integer not null REFERENCES Users2(UserPK),
+	UserID integer not null REFERENCES Users(UserPK),	
+	MatchedUserID integer not null REFERENCES Users(UserPK),
 	IsMatched integer not null default(1)	
 );
 
